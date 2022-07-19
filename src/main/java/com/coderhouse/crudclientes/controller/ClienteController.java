@@ -38,4 +38,9 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.crear(cliente));
     }
 
+    @PostMapping("/eliminar")
+    public void eliminar(@Valid @RequestBody ClienteRequest cliente) throws ApiException {
+        clienteService.eliminar(cliente);
+    }
+
 }
